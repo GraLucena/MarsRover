@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="MarsRover" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yo-uR-bXs">
+                                <rect key="frame" x="16" y="313" width="343" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="doneButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eFy-l0-gO5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ffh-3h-SHt"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y38-FL-IBb">
+                                <rect key="frame" x="40" y="233" width="295" height="40"/>
+                                <accessibility key="accessibilityConfiguration" identifier="commandsTextField"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kTi-zN-9hL"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onTextFieldChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="tak-LU-AbG"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hA0-6P-0i2">
+                                <rect key="frame" x="161.5" y="393" width="51" height="23.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="resultLabel"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Yo-uR-bXs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0Lf-9K-Bqb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Yo-uR-bXs" secondAttribute="trailing" constant="16" id="1pp-HV-KZj"/>
+                            <constraint firstItem="hA0-6P-0i2" firstAttribute="centerX" secondItem="5Yo-uR-bXs" secondAttribute="centerX" id="2Uw-hx-DuP"/>
+                            <constraint firstItem="Y38-FL-IBb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="34g-7d-8nH"/>
+                            <constraint firstItem="5Yo-uR-bXs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3li-z9-IWZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y38-FL-IBb" secondAttribute="trailing" constant="40" id="P8V-sJ-8xt"/>
+                            <constraint firstItem="Y38-FL-IBb" firstAttribute="centerX" secondItem="5Yo-uR-bXs" secondAttribute="centerX" id="Rrd-k4-oLR"/>
+                            <constraint firstItem="5Yo-uR-bXs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VpR-ZA-gPW"/>
+                            <constraint firstItem="5Yo-uR-bXs" firstAttribute="top" secondItem="Y38-FL-IBb" secondAttribute="bottom" constant="40" id="WYW-rQ-Mnx"/>
+                            <constraint firstItem="hA0-6P-0i2" firstAttribute="top" secondItem="5Yo-uR-bXs" secondAttribute="bottom" constant="40" id="xCr-Mp-9Dj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="commandsTextField" destination="Y38-FL-IBb" id="met-lq-T5C"/>
+                        <outlet property="doneButton" destination="5Yo-uR-bXs" id="bQP-8V-ClH"/>
+                        <outlet property="resultLabel" destination="hA0-6P-0i2" id="n8L-Qy-cb2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
